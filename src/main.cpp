@@ -3,6 +3,8 @@
 #include <vector>
 #include "FileHandler.h"
 #include "PerfNum.h"
+#include "Iterator.h"
+
 
 using namespace std;
 int main() {
@@ -11,8 +13,6 @@ int main() {
     char *path = const_cast<char *>(R"(H:\git\PerfNumC\src\datafile)");
     //scanf("%s",path);
     vector<int> list = fileToArray(path);
-    if(isPerfect(28)){
-        printf("funsiona");
-    }
-    return 1;
+    Iterator it = Iterator(list);
+    return 0;
 }
