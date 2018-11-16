@@ -6,8 +6,8 @@ using namespace std;
 
 
 IteratorC::IteratorC(vector<int> &list){
-    for (int &it : list) {
-        insert(it);
+    for (int i= 0; i < list.size(); i++) {
+        insert(i);
     }
 }
 
