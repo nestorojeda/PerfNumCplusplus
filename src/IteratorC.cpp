@@ -1,6 +1,3 @@
-//
-// Created by Néstor Ojeda on 15/11/2018.
-//
 #include <vector>
 #include "IteratorC.h"
 
@@ -26,8 +23,8 @@ void IteratorC::insert(int v){
     rear->info = v;
 }
 
-int* IteratorC::next(){
-    int pos[2] = {front->info, aux->info};
+vector<int> IteratorC::next(){
+    vector<int> pos = {front->info, aux->info};
     if(front->info != -1){
         if(aux == rear){
             if(front->next == rear){
@@ -48,6 +45,10 @@ int* IteratorC::next(){
         end = false;
     }
     return pos;
+}
+
+bool IteratorC::hasNext() {
+    return end;
 }
 
 IteratorC::Node::Node(IteratorC::Node *next, int info) : next(next), info(info) {}
