@@ -3,6 +3,7 @@
 #include <vector>
 #include <fstream>
 #include "FileHandler.h"
+
 using namespace std;
 vector<int> fileToArray(char * path){
     ifstream infile(path);
