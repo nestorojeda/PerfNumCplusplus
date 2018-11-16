@@ -11,13 +11,14 @@ using namespace std;
 int main() {
     unsigned t0,t1;
 
-    t0 = clock();
+
 
     cout<<"IMPORTANTE: EL ARCHIVO DEBE TENER UN SOLO NUMERO ENTERO POR CADA LINEA"<<endl;
     cout<<"Introduce la ruta del archivo: "<<endl;
     string path; //= const_cast<char *>(R"()");
 
     cin >> path;
+    t0 = clock();
 
     vector<int> list = fileToArray(path);
     IteratorC it = IteratorC(list);
