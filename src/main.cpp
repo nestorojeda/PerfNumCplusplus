@@ -10,9 +10,12 @@ using namespace std;
 int main() {
     cout<<"IMPORTANTE: EL ARCHIVO DEBE TENER UN SOLO NUMERO ENTERO POR CADA LINEA"<<endl;
     cout<<"Introduce la ruta del archivo: "<<endl;
-    char *path = const_cast<char *>(R"(./datafile)");
+    char *path = const_cast<char *>(R"(/home/nestorojedag/PycharmProjects/PerfNum/datafile)");
     //scanf("%s",path);
     vector<int> list = fileToArray(path);
     IteratorC it = IteratorC(list);
+    while (true){
+
+    }
     return 0;
 }
