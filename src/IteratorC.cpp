@@ -32,6 +32,7 @@ vector<int> IteratorC::next(){
                 front->info = -1;
                 aux = new Node();
                 aux->info = -1;
+                end = false;
             } else {
              front = front->next;
              aux = front->next;
