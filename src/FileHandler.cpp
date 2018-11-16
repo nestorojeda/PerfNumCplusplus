@@ -5,7 +5,7 @@
 #include "FileHandler.h"
 
 using namespace std;
-vector<int> fileToArray(char * path){
+vector<int> fileToArray(const string &path){
     ifstream infile(path);
     string line;
 
