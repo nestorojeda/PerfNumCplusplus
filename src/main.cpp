@@ -8,20 +8,17 @@
 
 
 using namespace std;
-int main() {
-    unsigned t0,t1;
+int main(int argc, char** argv) {
 
+    clock_t t0;
+    clock_t t1;
 
+    char *path = argv[1];
 
-    cout<<"IMPORTANTE: EL ARCHIVO DEBE TENER UN SOLO NUMERO ENTERO POR CADA LINEA"<<endl;
-    cout<<"Introduce la ruta del archivo: "<<endl;
-    string path; //= const_cast<char *>(R"()");
-
-    cin >> path;
     t0 = clock();
 
     vector<int> list = fileToArray(path);
-    IteratorC it = IteratorC(list);
+    IteratorC it = IteratorC(list.size()-1);
 
     while(it.hasNext()){
         vector<int> index = it.next();
