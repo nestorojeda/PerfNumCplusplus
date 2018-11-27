@@ -7,7 +7,7 @@ using namespace std;
 IteratorC::IteratorC(int size, int n){
     end = true;
     this->size = size;
-    this ->index.resize(n);
+    this ->index.resize(static_cast<unsigned int>(n));
     for (int i=0; i<n; i++) {
         this->index[i] = i;
     }
