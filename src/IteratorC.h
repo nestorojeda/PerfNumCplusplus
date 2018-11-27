@@ -5,12 +5,13 @@
 class IteratorC{
 
 public:
-    IteratorC(int n);
+    IteratorC(int size, int n);
     bool hasNext();
     std::vector<int> next();
 private:
-    int aux, rear, front;
-    bool end = true;
+    int size;
+    std::vector<int> index;
+    bool end;
 };
 
 #endif //PERFNUMC_ITERATOR_H
