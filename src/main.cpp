@@ -22,26 +22,26 @@ int main(int argc, char *argv[]) {
 
     vector<int> list = fileToArray(path);
     IteratorC it = IteratorC(list.size(), n);
-
-    while(it.hasNext()){
-        vector<int> index = it.next();
-        int sum = 0;
-        for (int i : index) {
-            sum += list[i];
-        }
-        if(isPerfect(sum)){
-            ostringstream vts;
-            if (!index.empty())
-            {
-                // Convert all but the last element to avoid a trailing ","
-                copy(index.begin(), index.end()-1,
-                          ostream_iterator<int>(vts, ", "));
-
-                // Now add the last element with no delimiter
-                vts << index.back();
+    if (n <= list.size()) {
+        while (it.hasNext()) {
+            vector<int> index = it.next();
+            int sum = 0;
+            for (int i : index) {
+                sum += list[i];
             }
-            cout<<"La combinacion de las posiciones: ["<< vts.str() <<"] genera el numero perfecto: "<<sum<<endl;
+            if (isPerfect(sum)) {
+                ostringstream vts;
+                if (!index.empty()) {
+                    copy(index.begin(), index.end() - 1,
+                         ostream_iterator<int>(vts, ", "));
+                    vts << index.back();
+                }
+                cout << "La combinacion de las posiciones: [" << vts.str() << "] genera el numero perfecto: " << sum
+                     << endl;
+            }
         }
+    }else{
+        printf("No puede haber más valores a permutar que valores en la lista");
     }
 
     t1 = clock();
